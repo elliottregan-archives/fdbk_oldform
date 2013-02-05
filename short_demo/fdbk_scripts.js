@@ -10,5 +10,9 @@ $(document).ready( function() {
     $('#share').delay(400).fadeIn(200);
   })
 
+  $('#menu').click( function() {
+    $('#foreground').toggleClass('slide_left');
+  })
+  
 //new FastClick(document.body);
 })
