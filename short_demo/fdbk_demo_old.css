@@ -4,8 +4,13 @@ html {
   text-shadow: 0 2px 1px #ffffff;
   padding: 0;
   margin: 0;
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
-  background-color: #373837;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   font: .8em "Open Sans", sans-serif;
 }
 
@@ -21,13 +26,6 @@ body {
   position: fixed;
 }
 
-hr {
-  margin: 40px;
-  background-color: #cdcdcd;
-  border: 0;
-  height: 1px;
-}
-
 #connect, #share {
   display: none;
 }
@@ -39,13 +37,7 @@ hr {
 fieldset {
   border: none;
   margin: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+  
   border-top: 1px solid #d7d7d7;
   -moz-box-shadow: 0 1px 0 #ffffff;
   -webkit-box-shadow: 0 1px 0 #ffffff;
@@ -53,18 +45,8 @@ fieldset {
   padding: 20px 10px;
 }
 
-fieldset:first-of-type {
-  margin-top: 20px;
-}
-
 fieldset.radio {
   padding: 20px 0;
-}
-
-h3, fieldset:not(.radio) label {
-  font: bold 1.4em 'Open Sans', sans-serif;
-  color: #686868;
-  margin: 0;
 }
 
 fieldset.radio h3 {
@@ -98,7 +80,6 @@ textarea, input[type=text] {
 
 header {
   width: 100%;
-  margin-bottom: 10px;
   background-color: rgba(255, 255, 255, 0.95);
   text-shadow: none;
   top: 0;
@@ -144,8 +125,8 @@ header h1 {
 
 
 header .logo {
-  height: 15px;
-  margin: 10px;
+  height: 20px;
+  margin: 4px 8px 2px;
   position: relative;
   opacity: .6;
   -webkit-transition: all 200ms ease-in;
@@ -197,7 +178,7 @@ button#menu {
 }
 
 #foreground {
-  background-color: #f7f7f7;
+  background-color: #fcfcfc;
   position: fixed;
   right: 0;
   width: 100%;
@@ -216,7 +197,7 @@ button#menu {
 }
 
 #background, #foreground {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 @-webkit-keyframes menu_slide {
@@ -235,24 +216,20 @@ button#menu {
   -webkit-transform: translateX(-90%);
   -moz-transform: translateX(-90%);
   opacity: .1;
+}
+
+#foreground {
+    background-color: #f6f6f6;
   
-
-}
-
-.light_text {
-  font-weight: 200;
-}
-
-.bolder_text {
-  font-weight: 600;
 }
 
 h1 {
-  font-family: 'Open Sans Condensed', sans-serif;
-  line-height: middle;
   height: 100%;
-  margin: 0 10px;
-  font-size: 2.8em;
+  margin: 0 10px 30px;
+  font: bold 2.8em 'Open Sans Condensed', sans-serif;
+  border-bottom: 1px solid #595a59;
+  color: #5a5a5a;
+  padding: 10px 0 0;
 }
 
 h2 {
@@ -260,6 +237,12 @@ h2 {
   color: #747474;
   font-family: 'Open Sans Condensed', sans-serif;
   margin: 0 10px;
+}
+
+h3, fieldset:not(.radio) label {
+  font: 200 1.8em 'Open Sans', sans-serif;
+  color: #686868;
+  margin: 0;
 }
 
 /* @group Radio Button Stuff */
@@ -279,7 +262,7 @@ input[type=radio] + label {
   width: 20%;
   display: inline-block;
   color: #717171;
-  font-weight: 500;
+  font-weight: 600;
   text-shadow: 0 1px 0 #ffffff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -306,8 +289,13 @@ input[type=email], input[type=text] {
   text-shadow: 0 1px 1px #ffffff;
 }
 
-fieldset:nth-of-type(odd) {
+fieldset:nth-of-type(even) {
   background-color: #fdfdfd;
+}
+
+fieldset:first-of-type {
+  border: none;
+  padding-top: 0;
 }
 
 /*input[type=radio] + label::before {
@@ -324,7 +312,7 @@ fieldset:nth-of-type(odd) {
 .target {
   width: 50px; height: 50px;
   display: block;
-  border: 3px dashed #7a7a7a;
+  border: 3px solid #7a7a7a;
   position: relative;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -340,7 +328,7 @@ fieldset:nth-of-type(odd) {
 .ball {
   display: block;
   -webkit-transform: scale(0);
-  background-color: #8cb387;
+  background-color: #d1de91;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -391,19 +379,18 @@ button {
   padding: 15px;
   display: block;
   width: 100%;
-	font-size: 1.1em;
-	position:relative;
-	color: #ecedec;
+  position:relative;
+	color: #595a59;
   -webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #92ba8c;
+  background-color: #d1de91;
   border-style: none;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
+  font: 1.1em 'Open Sans', sans-serif;
 }
 
 button.fb {
