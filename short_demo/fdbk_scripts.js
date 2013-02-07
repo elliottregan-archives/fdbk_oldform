@@ -1,3 +1,7 @@
+window.addEventListener('load', function() {
+    new FastClick(document.body);
+}, false);
+
 function $(id) {
 	return document.getElementById(id);
 }
@@ -5,6 +9,7 @@ function $(id) {
 function toStepTwo() {
   $("form").setAttribute("style", "display: none;");
   $("connect").setAttribute("style", "display: block;")
+  $("header").setAttribute("style", "display: block;")
 }
 
 function toStepThree() {

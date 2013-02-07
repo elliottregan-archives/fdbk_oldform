@@ -85,6 +85,7 @@ header {
   z-index: 100;
   border-bottom: 1px solid #e4e4e4;
   position: fixed;
+  display: none;
 }
 
 header h1 {
@@ -141,19 +142,6 @@ header .logo {
   top: 0;
 }
 
-header button {
-  width: 50px;
-  height: 25px;
-  margin: 6px;
-  padding: 0;
-}
-
-button#menu {
-  background-size: 65%;
-  background: url(ic_menu.svg) no-repeat center center;
-  opacity: .4;
-}
-
 #background {
   background-color: #383838;
   width: 80%;
@@ -193,33 +181,12 @@ button#menu {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-#background, #foreground {
   padding-top: 30px;
+  background-color: #f6f6f6; 
 }
 
-@-webkit-keyframes menu_slide {
-  0% {
-    -webkit-transform: translateX(0% );
-  }
-  100% {
-    -webkit-transform: translateX(-200px );
-  }
-}
-
-#foreground.slide_left  {
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-transform: translateX(-90%);
-  -moz-transform: translateX(-90%);
-  opacity: .1;
-}
-
-#foreground {
-    background-color: #f6f6f6;
-  
+#form {
+  margin-top: -30px;
 }
 
 h1 {
@@ -346,12 +313,59 @@ fieldset:first-of-type {
   -moz-transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
   -ms-transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
   -o-transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
-  transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1.650); /* custom */
+  transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
   
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   opacity: 0;
+}
+
+label > * { pointer-events: none; }
+
+input[type=radio]:nth-of-type(1) + label .ball {
+  -webkit-transition: all 200ms cubic-bezier(0.280, 0.000, 0.345, 1); /* older webkit */
+  -webkit-transition: all 200ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -moz-transition: all 200ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -ms-transition: all 200ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -o-transition: all 200ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  transition: all 200ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+}
+
+input[type=radio]:nth-of-type(2) + label .ball {
+  -webkit-transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1); /* older webkit */
+  -webkit-transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -moz-transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -ms-transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -o-transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  transition: all 400ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+}
+
+input[type=radio]:nth-of-type(3) + label .ball {
+  -webkit-transition: all 600ms cubic-bezier(0.280, 0.000, 0.345, 1); /* older webkit */
+  -webkit-transition: all 600ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -moz-transition: all 600ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -ms-transition: all 600ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -o-transition: all 600ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  transition: all 600ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+}
+
+input[type=radio]:nth-of-type(4) + label .ball {
+  -webkit-transition: all 800ms cubic-bezier(0.280, 0.000, 0.345, 1); /* older webkit */
+  -webkit-transition: all 800ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -moz-transition: all 800ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -ms-transition: all 800ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -o-transition: all 800ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  transition: all 800ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+}
+
+input[type=radio]:nth-of-type(5) + label .ball {
+  -webkit-transition: all 1000ms cubic-bezier(0.280, 0.000, 0.345, 1); /* older webkit */
+  -webkit-transition: all 1000ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -moz-transition: all 1000ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -ms-transition: all 1000ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  -o-transition: all 1000ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
+  transition: all 1000ms cubic-bezier(0.280, 0.000, 0.345, 1.650);
 }
 
 .text {
