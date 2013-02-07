@@ -170,11 +170,6 @@ header .logo {
   right: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition: all 400ms ease-in-out;
-  -moz-transition: all 400ms ease-in-out;
-  -ms-transition: all 400ms ease-in-out;
-  -o-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 40px;
@@ -321,7 +316,9 @@ fieldset:first-of-type {
   opacity: 0;
 }
 
-label > * { pointer-events: none; }
+label > * { pointer-events: none; } /*This allows the users to tap behind the .ball and .target with FastClick.js*/
+
+/* @group Flowing select animation */
 
 input[type=radio]:nth-of-type(1):checked ~ :nth-of-type(1) .ball {
   -webkit-transition-delay: 0;
@@ -427,6 +424,8 @@ input[type=radio]:nth-of-type(5):checked ~ :nth-of-type(5) .ball {
   -o-transition-delay: 0;
   transition-delay: 0;
 }
+
+/* @end */
 
 .text {
   z-index: 100;
