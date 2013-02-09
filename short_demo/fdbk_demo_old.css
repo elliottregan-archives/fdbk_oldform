@@ -11,6 +11,9 @@ html {
   -o-user-select: none;
   user-select: none;
   font: .8em "Open Sans", sans-serif;
+  height: 100%;
+  background-color: #f6f6f6; 
+  
 }
 
 *:not(html){
@@ -20,9 +23,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   width: 100%;
-  position: fixed;
+  min-height: 100%;
 }
 
 #connect, #share {
@@ -128,12 +130,14 @@ header .logo {
   height: 20px;
   margin: 4px 8px 2px;
   position: relative;
-  opacity: .6;
-  -webkit-transition: all 300ms ease-in;
-  -moz-transition: all 300ms ease-in;
-  -ms-transition: all 300ms ease-in;
-  -o-transition: all 300ms ease-in;
-  transition: all 300ms ease-in;
+}
+
+footer .logo {
+  padding-top: 40px;
+  width: 100px;
+  margin: auto;
+  position: static;
+  display: block;
 }
 
 .right {
@@ -142,42 +146,13 @@ header .logo {
   top: 0;
 }
 
-#background {
-  background-color: #383838;
-  width: 80%;
-  height: 600px;
-  right: 0;
-  position: fixed;
-  top: 0;
-  margin-left: 10%;
-  text-align: center;
-  color: #ffffff;
-  text-shadow: 0 1px 2px black;
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-#background h2 {
-  color: #d3d3d3;
-  margin-top: 20px;
-}
-
 #foreground {
   background-color: #fcfcfc;
-  position: fixed;
-  right: 0;
   width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 40px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-top: 30px;
+  padding: 40px 0;
   background-color: #f6f6f6; 
+  min-height: 100%;
+  
 }
 
 #form {
@@ -203,6 +178,10 @@ h3, fieldset:not(.radio) label {
   font: 400 1.8em 'Open Sans', sans-serif;
   color: #686868;
   margin: 0;
+}
+
+p {
+  font-size: 1.4em;
 }
 
 /* @group Radio Button Stuff */
@@ -318,10 +297,14 @@ fieldset:first-of-type {
   opacity: 0;
 }
 
+/* @group A few bug fixes related this radio layout */
+
 body { -webkit-animation: bugfix infinite 1s; }
-@-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } }
+@-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } } /* Fix for pseudo and adjacent selector bug in older webkit. css-tricks.com/webkit-sibling-bug/*/
 
 label > * { pointer-events: none; } /*This allows the users to tap behind the .ball and .target with FastClick.js*/
+
+/* @end */
 
 /* @group Flowing select animation */
 
@@ -487,21 +470,21 @@ button.fb:active {
 button.subtle {
   color: #838383;
   background-color: rgba(182, 182, 182, 0);
-  border: 4px solid #c9c9c9;
+/*  border: 4px solid #c9c9c9;*/
+border: none;
 }
 
 button.subtle:active {
-  background: -moz-linear-gradient(90deg, #b4b4b4 0%, #a9a9a9 100%) #b6b6b6;
-  background: -webkit-gradient(linear, left bottom, left top, from(#b4b4b4), to(#a9a9a9)) #b6b6b6;
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.49);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.49);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.49);
+  border-color: #595959;
+  background-color: rgba(182, 182, 182, 0);
+  
 }
 
 
 
 button:active {
 	top:1px;
+  background-color: #bdcc74;
 }
 
 /* @end */
