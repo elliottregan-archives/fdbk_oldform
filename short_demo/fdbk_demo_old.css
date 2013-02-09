@@ -292,6 +292,8 @@ fieldset:first-of-type {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  height: 0;
+  width: 0;
   top: 25px;
   left: 25px;
   position: absolute;
@@ -315,6 +317,9 @@ fieldset:first-of-type {
   box-sizing: border-box;
   opacity: 0;
 }
+
+body { -webkit-animation: bugfix infinite 1s; }
+@-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } }
 
 label > * { pointer-events: none; } /*This allows the users to tap behind the .ball and .target with FastClick.js*/
 
