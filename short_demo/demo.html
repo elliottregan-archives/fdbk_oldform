@@ -30,7 +30,7 @@
       <h1>Business Name</h1>
       <form method="post">
         <fieldset class="radio">
-          <h3>Overall</h3>
+          <h3>Single-Select</h3>
           <input id="q01a01" type="radio" name="q01" value="0" />
           <label for="q01a01"><span class="target"><span class="ball"></span></span><span class="text">Great</span></label> 
           
@@ -47,62 +47,43 @@
           <label for="q01a05"><span class="target"><span class="ball"></span></span><span class="text">Bad</span></label> 
         </fieldset>
         
-        <fieldset class="radio">
-          <h3>Food/Bev</h3>
-          <input id="q02a01" type="radio" name="q02" value="0" />
-          <label for="q02a01"><span class="target"><span class="ball"></span></span><span class="text">Bad</span></label> 
-          <input id="q02a02" type="radio" name="q02" value="1" />
-          <label for="q02a02"><span class="target"><span class="ball"></span></span><span class="text">Poor</span></label> 
-          <!--<input id="q02a03" type="radio" name="q02" value="2" />
-          <label for="q02a03">Ok</label> -->
-          <input id="q02a04" type="radio" name="q02" value="3" />
-          <label for="q02a04"><span class="target"><span class="ball"></span></span><span class="text">Good</span></label> 
-          <input id="q02a05" type="radio" name="q02" value="4" />
-          <label for="q02a05"><span class="target"><span class="ball"></span></span><span class="text">Great!</span></label> 
+        <fieldset class="radio binary">
+          <h3>Yes or no?</h3>
+          <input id="q02a01" type="radio" name="q01" value="0" />
+          <label for="q02a01"><span class="target"><span class="ball"></span></span><span class="text">Yes</span></label> 
+          
+          <input id="q02a02" type="radio" name="q01" value="1" />
+          <label for="q02a02"><span class="target"><span class="ball"></span></span><span class="text">No</span></label> 
         </fieldset>
         
-        <fieldset class="radio">
-          <h3>Service</h3>
-          <input id="q03a01" type="radio" name="q03" value="0" />
-          <label for="q03a01"><span class="target"><span class="ball"></span></span><span class="text">Bad</span></label> 
-          <input id="q03a02" type="radio" name="q03" value="1" />
-          <label for="q03a02"><span class="target"><span class="ball"></span></span><span class="text">Poor</span></label> 
-          <!--<input id="q03a03" type="radio" name="q03" value="2" />
-          <label for="q03a03">Ok</label> -->
-          <input id="q03a04" type="radio" name="q03" value="3" />
-          <label for="q03a04"><span class="target"><span class="ball"></span></span><span class="text">Good</span></label> 
-          <input id="q03a05" type="radio" name="q03" value="4" />
-          <label for="q03a05"><span class="target"><span class="ball"></span></span><span class="text">Great!</span></label> 
+        <fieldset>
+          <label for="select_single">Single Select</label>
+          <select id="select_single" autofocus="false">
+            <optgroup label="Group 1">
+              <option>option 1</option>
+              <option>option 2</option>
+            </optgroup>
+            <optgroup label="Group 2">
+              <option>option 1</option>
+              <option>option 2</option>
+            </optgroup>
+          </select> 
         </fieldset>
         
-        <fieldset class="radio">
-          <h3>Ambience</h3>
-          <input id="q04a01" type="radio" name="q04" value="0" />
-          <label for="q04a01"><span class="target"><span class="ball"></span></span><span class="text">Bad</span></label> 
-          <input id="q04a02" type="radio" name="q04" value="1" />
-          <label for="q04a02"><span class="target"><span class="ball"></span></span><span class="text">Poor</span></label> 
-          <!--<input id="q04a03" type="radio" name="q04" value="2" />
-          <label for="q04a03">Ok</label>--> 
-          <input id="q04a04" type="radio" name="q04" value="3" />
-          <label for="q04a04"><span class="target"><span class="ball"></span></span><span class="text">Good</span></label> 
-          <input id="q04a05" type="radio" name="q04" value="4" />
-          <label for="q04a05"><span class="target"><span class="ball"></span></span><span class="text">Great!</span></label> 
+        <fieldset>
+          <label for="select_multi">Multi Select</label>
+          <select id="select_multi" multiple="multiple">
+            <optgroup label="Group 1">
+              <option>option 1</option>
+              <option>option 2</option>
+            </optgroup>
+            <optgroup label="Group 2">
+              <option>option 1</option>
+              <option>option 2</option>
+            </optgroup>
+          </select> 
         </fieldset>
-        
-        <fieldset class="radio">
-          <h3>Value</h3>
-          <input id="q05a01" type="radio" name="q05" value="0" />
-          <label for="q05a01"><span class="target"><span class="ball"></span></span><span class="text">Bad</span></label> 
-          <input id="q05a02" type="radio" name="q05" value="1" />
-          <label for="q05a02"><span class="target"><span class="ball"></span></span><span class="text">Poor</span></label> 
-          <!--<input id="q05a03" type="radio" name="q05" value="2" />
-          <label for="q05a03">Ok</label> -->
-          <input id="q05a04" type="radio" name="q05" value="3" />
-          <label for="q05a04"><span class="target"><span class="ball"></span></span><span class="text">Good</span></label> 
-          <input id="q05a05" type="radio" name="q05" value="4" />
-          <label for="q05a05"><span class="target"><span class="ball"></span></span><span class="text">Great!</span></label> 
-        </fieldset>
-                
+               
         <fieldset>
           <label for="q05">Tips & Comments for the Public</label>
           <textarea id="q05"></textarea>
@@ -119,7 +100,7 @@
         </fieldset>
         
         <fieldset>
-          <button id="send" type="reset" onclick="toStepTwo()">Send Feedback</button>
+          <button id="send" type="button" onclick="toStepTwo()">Send Feedback</button>
         </fieldset>
         
       </form>
@@ -159,7 +140,7 @@
     </div>
     </div>
     <footer>
-      <a href="http://www.fdbk.com" target="_blank"><img class="logo" src="fdbk-logo.svg" alt="fdbk logo" /></a>
+      <img class="logo" src="fdbk-logo.svg" alt="fdbk logo" />
     </footer>
   </section>
   
